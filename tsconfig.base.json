@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mathlive-chat-poc/frontend-tools": ["libs/frontend-tools/src/index.ts"],
+      "@mathlive-chat-poc/frontend-tools-react": [
+        "libs/frontend-tools-react/src/index.ts"
+      ],
+      "@mathlive-chat-poc/models": ["libs/models/src/index.ts"],
+      "@mathlive-chat-poc/vendors": ["libs/vendors/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "frontend-tools": "libs/frontend-tools",
+    "frontend-tools-react": "libs/frontend-tools-react",
+    "models": "libs/models",
+    "public-frontend-angular": "apps/public-frontend-angular",
+    "public-frontend-angular-e2e": "apps/public-frontend-angular-e2e",
+    "public-frontend-react": "apps/public-frontend-react",
+    "public-frontend-react-e2e": "apps/public-frontend-react-e2e",
+    "vendors": "libs/vendors"
+  }
+}

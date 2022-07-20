@@ -1,0 +1,32 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "../../apps/public-frontend-angular-e2e/src/fixtures",
+  "integrationFolder": "../../apps/public-frontend-angular-e2e/src/integration",
+  "modifyObstructiveCode": false,
+  "supportFile": "../../apps/public-frontend-angular-e2e/src/support/index.ts",
+  "pluginsFile": false,
+  "video": true,
+  "videosFolder": "../../dist/cypress/apps/public-frontend-react-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/apps/public-frontend-react-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "env": {
+    "baseUrl": "http://localhost:4201",
+    "protocol": "http",
+    "hostname": "localhost",
+    "port": 4201,
+    "backApi": {
+      "baseUrl": "http://localhost:3334/api",
+      "baseUrlUser": "http://localhost:3334/api/users",
+      "baseUrlMessage": "http://localhost:3334/api/messages",
+      "baseUrlTodos": "http://localhost:3334/api/todos"
+    },
+    "routes": {
+      "root": "",
+      "login": "login",
+      "maintenance": "maintenance"
+    }
+  },
+  "viewportWidth": 1920,
+  "viewportHeight": 969,
+  "pageLoadTimeout": 20000
+}

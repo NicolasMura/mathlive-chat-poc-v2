@@ -1,0 +1,102 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/public-frontend-angular/src",
+  "prefix": "mathlive-chat-poc",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/public-frontend-angular",
+        "index": "apps/public-frontend-angular/src/index.html",
+        "main": "apps/public-frontend-angular/src/main.ts",
+        "polyfills": "apps/public-frontend-angular/src/polyfills.ts",
+        "tsConfig": "apps/public-frontend-angular/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/public-frontend-angular/src/assets",
+          "apps/public-frontend-angular/src/env.js",
+          {
+            "glob": "**/*",
+            "input": "libs/frontend-tools/src/lib/assets/",
+            "output": "./assets"
+          }
+        ],
+        "styles": [
+          "apps/public-frontend-angular/src/styles.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": [ "libs/frontend-tools/src/lib/styles" ]
+        },
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "public-frontend-angular:build:production"
+        },
+        "development": {
+          "browserTarget": "public-frontend-angular:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "public-frontend-angular:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/public-frontend-angular/**/*.ts",
+          "apps/public-frontend-angular/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/public-frontend-angular"
+      ],
+      "options": {
+        "jestConfig": "apps/public-frontend-angular/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

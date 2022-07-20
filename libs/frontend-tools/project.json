@@ -1,0 +1,27 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/frontend-tools/src",
+  "prefix": "mathlive-chat-poc",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/frontend-tools"
+      ],
+      "options": {
+        "jestConfig": "libs/frontend-tools/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/frontend-tools/**/*.ts",
+          "libs/frontend-tools/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
