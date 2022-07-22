@@ -1,18 +1,8 @@
 @import 'app-material-theme';
 
-// @import 'app-material-buttons';
-// @import 'app-material-dialogs';
-// @import 'app-material-icons';
 @import 'app-material-notifications';
-// @import 'app-material-select';
-// @import 'app-material-tables';
-// @import 'app-material-tabs';
-// @import 'app-material-tooltips';
-// @import 'app-skeletons';
-// @import 'app-slider-swiper';
 @import 'app-startup-loader';
 @import 'app-spinners';
-// @import 'app-fonts';
 
 @tailwind base;
 @tailwind components;
@@ -24,9 +14,6 @@
     General
 ===============
 */
-// @TODO : https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551
-// $roboto-font-path: "~roboto-fontface/fonts";
-// @import "~roboto-fontface/css/roboto/sass/roboto-fontface";
 
 *:not(input):not(textarea) { // to make it work for iOS
   // user-select: none;

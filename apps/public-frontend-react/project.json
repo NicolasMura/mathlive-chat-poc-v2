@@ -16,7 +16,6 @@
         "polyfills": "apps/public-frontend-react/src/polyfills.ts",
         "tsConfig": "apps/public-frontend-react/tsconfig.app.json",
         "assets": [
-          "apps/public-frontend-react/src/favicon.ico",
           "apps/public-frontend-react/src/assets"
         ],
         "styles": ["apps/public-frontend-react/src/styles.scss"],

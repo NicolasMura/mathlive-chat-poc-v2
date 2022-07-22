@@ -3,19 +3,14 @@ const { join } = require('path');
 
 module.exports = {
   content: [
-    join(
-      __dirname,
-      '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
+    join(__dirname, '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html,js }'),
+    './node_modules/tw-elements/dist/js/**/*.js',
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {},
-    ripple: theme => ({
-      colors: theme('colors')
-    }),
   },
   plugins: [
-    require('tailwindcss-ripple')()
+    require('tw-elements/dist/plugin'),
   ],
 };

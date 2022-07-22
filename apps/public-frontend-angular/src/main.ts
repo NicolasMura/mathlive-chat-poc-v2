@@ -4,6 +4,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from '@mathlive-chat-poc/frontend-tools';
 
+import 'tw-elements';
+
 if (environment.production) {
   enableProdMode();
 }
